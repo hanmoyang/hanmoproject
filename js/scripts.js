@@ -48,10 +48,11 @@ L.geoJson(universities,{
 
         $('#sidebar h2').text(feature.properties.name)
       })
-  },
+    },
+
     pointTolayer:function(feature,latLng){
      return L.marker(latLng,{icon:museumIcon}).addTo(map);
-  }
+    }
   }).addTo(map);
 
   var galleries=L.geoJson(galleries, {
