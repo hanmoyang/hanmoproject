@@ -53,7 +53,7 @@ L.geoJson(universities,{
     pointTolayer:function(feature,latLng){
      return L.marker(latLng,{icon:museumIcon}).addTo(map);
     }
-  }).addTo(map);
+    }).addTo(map);
 
   var galleries=L.geoJson(galleries, {
       onEachFeature: function (feature, layer) {
