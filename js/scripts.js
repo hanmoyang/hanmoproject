@@ -31,7 +31,19 @@ var map = L.map('mapContainer').setView([40.745653, -73.989614], 12);
           fillColor:customColor,
           weight:2,
         };
-      }
+      },
+       onEachFeature: function (feature, layer) {
+        layer.on('click', function() {
+
+          var string = '<h2>'
+          +feature.properties.name
+          +'</h2><h5>'
+          +feature.properties.intro
+          +'</h5>';
+
+          $('#sidebar h2').html(string)
+        })
+      },     
     }).addTo(map);
 
     var museumMarker = {
@@ -64,8 +76,19 @@ var map = L.map('mapContainer').setView([40.745653, -73.989614], 12);
             z: 1
         };
         return L.circleMarker(latlng, geojsonMarkerOptions);
-      }
-      
+      },
+            
+       onEachFeature: function (feature, layer) {
+          
+          var string = '<h4>'
+          +feature.properties.NAME
+          +'</h4><h6>'
+          +feature.properties.TEL
+          +'</h6>';
+
+          layer.bindPopup(string);
+        },     
+
         }).addTo(map);
 
       var galleries=L.geoJson(galleries,{
@@ -80,7 +103,25 @@ var map = L.map('mapContainer').setView([40.745653, -73.989614], 12);
             z: 1
         };
         return L.circleMarker(latlng, geojsonMarkerOptions);
-      }        
+      },
+
+       onEachFeature: function (feature, layer) {
+          
+          var string = '<h4>'
+          +feature.properties.NAME
+          +'</h4><h6>'
+          +feature.properties.TEL
+          +'</br>Address:'+feature.properties.ADDRESS1+','
+          +feature.properties.CITY+','
+          +feature.properties.ZIP
+          +'</br>'+feature.properties.URL                              
+          +'</h6>';
+
+          layer.bindPopup(string);
+          layer.on('mouseover', function() { layer.openPopup(); });
+          layer.on('mouseout', function() { layer.closePopup(); });
+        },   
+
       }).addTo(map);
 
 
@@ -137,13 +178,4 @@ var map = L.map('mapContainer').setView([40.745653, -73.989614], 12);
             '</br> Address: ' + layer.feature.properties.ADDRESS1  +
             '</br> City: ' + layer.feature.properties.CITY);
     }).addTo(map);
-
-    var museuminfo = L.geoJson(galleries, {
-      opacity: 0,
-      fillopacity: 0
-    }).bindPopup(function (layer) {
-        return (' Museum Name: ' + layer.feature.properties.NAME +
-            '</br> Tel: ' + layer.feature.properties.TEL+
-            '</br> Address: ' + layer.feature.properties.ADDRESS1  +
-            '</br> City: ' + layer.feature.properties.CITY);
-    }).addTo(map);    
+   
