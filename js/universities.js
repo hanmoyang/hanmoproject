@@ -6,7 +6,6 @@ var universities=
       "type": "Feature",
       "properties": {
         "name": "Columbia University",
-        "intro":"hello world"
         "value": 1
       },
       "geometry": {

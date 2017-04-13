@@ -7,22 +7,23 @@ var map = L.map('mapContainer').setView([40.745653, -73.989614], 12);
 
 L.geoJson(universities,{
   style:function(feature){
+    
     var customColor;
 
     if(feature.properties.value == 1){
-      customColor="orange"
+      customColor="orange";
     }
 
     if(feature.properties.value == 2){
-      customColor="blue"
+      customColor="blue";
     }
 
     if(feature.properties.value == 3){
-      customColor="purple"
+      customColor="purple";
     }    
 
     if(feature.properties.value == 4){
-      customColor="yellow"  
+      customColor="yellow";  
     }    
 
     return {
@@ -30,7 +31,7 @@ L.geoJson(universities,{
       fillColor:customColor,
       weight:2,
     };
-  }
+  },
 }).addTo(map);
 
   var museumIcon = L.icon({
@@ -46,7 +47,21 @@ L.geoJson(universities,{
     onEachFeature: function (feature, layer) {
       layer.on('click', function() {
 
-        $('#sidebar h2').text(feature.properties.name)
+        var string='<h2>'
+        +feature.properties.NAME
+        +'</h2><div>'
+        +feature.properties.TEL
+        +'</div><div>'
+        +feature.properties.URL
+        +'</div><div>'
+        +feature.properties.ADDRESS1
+        +'</div><div>'
+        +feature.properties.CITY
+        +'</div><div>'
+        +feature.properties.ZIP
+        +'</div>'
+
+        $('#sidebar h2').html(string)
       })
     },
 
@@ -59,9 +74,24 @@ L.geoJson(universities,{
       onEachFeature: function (feature, layer) {
         layer.on('click', function() {
 
-        $('#sidebar h2').text(feature.properties.name)
+        var string='<h2>'
+        +feature.properties.NAME
+        +'</h2><div>'
+        +feature.properties.TEL
+        +'</div><div>'
+        +feature.properties.URL
+        +'</div><div>'
+        +feature.properties.ADDRESS1
+        +'</div><div>'
+        +feature.properties.CITY
+        +'</div><div>'
+        +feature.properties.ZIP
+        +'</div>'
+
+        $('#sidebar h2').html(string)
         })
       },
+
       pointTolayer:function(feature,latLng){
       return L.marker(latLng,{icon:galleryIcon}).addTo(map);
     }
