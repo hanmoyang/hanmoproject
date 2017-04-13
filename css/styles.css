@@ -1,0 +1,17 @@
+
+#mapContainer {
+  margin:0 auto;
+  height: 500px;
+  width:70%;
+  display: inline-block;
+}
+
+
+#sidebar {
+  display: inline-block;
+  position: absolute;
+  padding: 15px;
+  background: #ffffff;
+  width: 30%;
+  height: 500px;
+}
