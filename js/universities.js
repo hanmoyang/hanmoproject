@@ -5,7 +5,7 @@ var universities=
     {
       "type": "Feature",
       "properties": {
-        "name": "Free Museums for Columbia University's students",
+        "name": "Free for Columbia University's students",
         "intro":"The Africa Center, American Folk Art Museum, The American Numismatic Society, Asia Society, The Bronx Museum of the Arts, Brooklyn Historical Society, Caribbean Cultural Center African Diaspora Institute, The Cloisters, Dahesh Museum, El Museo del Barrio, Goethe-Institut, International Center of Photography, Intrepid Sea Air & Space Museum, Japan Society, The Jewish Museum, The Met Breuer, The Metropolitan Museum of Art, MoMA PS1, The Morgan Library & Museum, Museum of Jewish Heritage, Museum of Modern Art (MoMA), Museum of the City of New York",
         "value": 1
       },
@@ -56,7 +56,7 @@ var universities=
     {
       "type": "Feature",
       "properties": {
-        "name": "Free museums for New York University's students",
+        "name": "Free for New York University's students",
         "intro":"El Museo del Barrio, Grey Art Gallery, Museum of the City of New York, Museum of Modern Art, Museum of the Moving Image, New Museum, Whitney Museum of American Art",
         "value": 2
       },
@@ -91,7 +91,7 @@ var universities=
     {
       "type": "Feature",
       "properties": {
-        "name": "Free Museums for Fordham University's students",
+        "name": "Free for Fordham University's students",
         "intro":"American Folk Art Museum, Asia Society Museum, Brooklyn Children’s Museum, Brooklyn Museum, The Cloisters, El Museo del Barrio, Hispanic Society of America Museum and Library, Museum of the City of NY",
         "value": 3
       },
@@ -126,7 +126,7 @@ var universities=
     {
       "type": "Feature",
       "properties": {
-        "name": "Free museums for Parsons School of Design's students",
+        "name": "Free for Parsons School of Design's students",
         "intro":"Rubin Museum of Art, Museum of Modern Art (MoMA), MoMA PS1",
         "value": 4
       },
