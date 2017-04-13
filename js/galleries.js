@@ -1,7 +1,6 @@
 var galleries =
 {
 "type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
 "features": [
 { "type": "Feature", "properties": { "NAME": "O'reilly William & Co Ltd", "TEL": "(212) 396-1822", "URL": "http:\/\/www.nyc.com\/arts__attractions\/oreilly_william__co_ltd.806\/whats_nearby.aspx", "ADDRESS1": "52 E 76th St", "ADDRESS2": null, "CITY": "New York", "ZIP": 10021.000000 }, "geometry": { "type": "Point", "coordinates": [ -73.962730745619908, 40.77380087163754 ] } },

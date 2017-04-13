@@ -1,8 +1,6 @@
 var museums =
 {
 "type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
 "features": [
 { "type": "Feature", "properties": { "NAME": "Alexander Hamilton U.S. Custom House", "TEL": "(212) 514-3700", "URL": "http:\/\/www.oldnycustomhouse.gov\/", "ADRESS1": "1 Bowling Grn", "ADDRESS2": null, "CITY": "New York", "ZIP": 10004.000000 }, "geometry": { "type": "Point", "coordinates": [ -74.013755795197326, 40.703816216917993 ] } },
 { "type": "Feature", "properties": { "NAME": "Alice Austen House Museum", "TEL": "(718) 816-4506", "URL": "http:\/\/www.aliceausten.org\/", "ADRESS1": "2 Hylan Blvd", "ADDRESS2": null, "CITY": "Staten Island", "ZIP": 10305.000000 }, "geometry": { "type": "Point", "coordinates": [ -74.063031788551058, 40.615120837755327 ] } },
